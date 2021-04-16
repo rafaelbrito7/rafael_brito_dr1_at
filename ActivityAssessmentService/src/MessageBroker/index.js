@@ -16,12 +16,17 @@ class MessageBroker {
 
   async readMessage() {
     try {
-      let content;
+       let content;
 
       channel.assertQueue(queue)
       await channel.consume(queue, (message) => {
         content = message.content.toString()
-      });
+        console.log(content);
+      },
+      { 
+        noAck: true
+      }
+      );
 
       return content;  
     } catch (error) {

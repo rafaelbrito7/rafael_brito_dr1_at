@@ -4,7 +4,6 @@ import MessageBroker from '../MessageBroker';
 class ActivityController {
   async read(req, res) {
     const id = await MessageBroker.readMessage();
-    console.log(id);
     
     return res.json({
       status: true,
@@ -35,8 +34,7 @@ class ActivityController {
 
     return res.json({
       status: true,
-      message: 'Activity saved.',
-      activity
+      message: 'Activity updated with success.',
     })
   }
 }
