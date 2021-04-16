@@ -1,0 +1,4 @@
+module.exports = {
+  ACTIVITY_COMPLETED_URL: '0.0.0.0:3001',  
+  ACTIVITY_ASSESSMENT_URL: '0.0.0.0:3002'
+}
